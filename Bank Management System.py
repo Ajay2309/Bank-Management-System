@@ -8,7 +8,7 @@ import sys
 import random
 
 
-df=pd.read_csv("E:/Documents/Account_Details.csv",index_col="sno.")#location of csv file in system
+df=pd.read_csv("E:/Documents/Account_Details.csv",index_col="sno.")   #location of csv file in system
 df2=df.to_csv("E:/Documents/User_Names.csv", columns=['name'])
 
 
@@ -77,7 +77,6 @@ def about() :
     
 
     
-
 def add_acc():
     print(pd.read_csv("E:/Documents/Account_Details.csv",index_col="sno."))
     sno=int(input("ENTER S.NO:"))
@@ -110,9 +109,6 @@ def dep():     #DEPOSIT OF CASH
     print(df)
     
 
-
-
-
     
 def wc(): #WITHDRAWL OF CASH
     fetchcsv()
@@ -129,8 +125,6 @@ def wc(): #WITHDRAWL OF CASH
     g=df.loc[rows_to_update, cols_to_update] = values
     print(df)
     
-
-
 
 
 def cb():  #CHECK BALANCE AND DETAILS
@@ -155,7 +149,6 @@ def da():#DELETE ACCOUNT
     VV=input("PRESS ENTER TO SHOW NEW TABLE\n")
     print(df)
     
-
 
 
 inp=int(input("ENTER YOUR CHOICE :"))
@@ -205,8 +198,3 @@ elif inp==7:
 else:
     print("WRONG INPUT ...")
     print("PLEASE RESTART THE PROGRAMME")
-
-
-
-
-    
