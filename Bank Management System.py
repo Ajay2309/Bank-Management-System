@@ -110,7 +110,7 @@ def dep():     #DEPOSIT OF CASH
     
 
     
-def wc(): #WITHDRAWL OF CASH
+def wc():   #WITHDRAWL OF CASH
     fetchcsv()
     sno=int(input("ENTER YOUR SERIAL NO.:"))
     balance=int(input("ENTER YOUR CURRENT BALANCE:"))
@@ -138,7 +138,7 @@ def cb():  #CHECK BALANCE AND DETAILS
     
 
 
-def da():#DELETE ACCOUNT
+def da():   #DELETE ACCOUNT
     print("FOR DELETING ACCOUNT ")
     fetchcsv()
     df=pd.read_csv("E:/Documents/Account_Details.csv",index_col="account no.")
@@ -163,37 +163,29 @@ if inp==0:
     print()
     print(pd.read_csv("E:/Documents/User_Names.csv",index_col=0))
     print()'''
-
     
 elif inp==1:
     print("EXISTING ACCOUNTS DETAILS ARE:\n")
     fetchcsv()
     print()
-
     
 elif inp==2:
     add_acc()
-
-    
+   
 elif inp==3:
     dep()
-
     
 elif inp==4:
     wc()
-
     
 elif inp==5:
     cb()
 
-    
 elif inp==6:
     da()
-
     
 elif inp==7:
     sys.exit
-
     
 else:
     print("WRONG INPUT ...")
