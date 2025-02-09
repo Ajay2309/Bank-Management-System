@@ -1,7 +1,6 @@
 # Bank Management System
 # BY <<<<< Ajay >>>>>>
 
-
 import pandas as pd
 import numpy as np
 import sys
@@ -75,7 +74,6 @@ def about() :
     print("IN THIS PROJECT THERE ARE 2 CSV FILE AND 7 OPTION\n")
     print("THANK YOU\n")
     
-
     
 def add_acc():
     print(pd.read_csv("E:/Documents/Account_Details.csv",index_col="sno."))
@@ -90,7 +88,6 @@ def add_acc():
     df.loc[sno,:] = [name,age,acc_no,gender,bal,]
     writecsv(df)
     
-
 
 def dep():     #DEPOSIT OF CASH
     fetchcsv()
@@ -108,8 +105,7 @@ def dep():     #DEPOSIT OF CASH
     g=df.loc[rows_to_update, cols_to_update] = values
     print(df)
     
-
-    
+ 
 def wc():   #WITHDRAWL OF CASH
     fetchcsv()
     sno=int(input("ENTER YOUR SERIAL NO.:"))
@@ -126,7 +122,6 @@ def wc():   #WITHDRAWL OF CASH
     print(df)
     
 
-
 def cb():  #CHECK BALANCE AND DETAILS
     #second csv file 
     print(pd.read_csv("E:/Documents/User_Names.csv",index_col=0),'\n')
@@ -136,7 +131,6 @@ def cb():  #CHECK BALANCE AND DETAILS
     print(detail)
     print("THANK YOU")
     
-
 
 def da():   #DELETE ACCOUNT
     print("FOR DELETING ACCOUNT ")
@@ -149,7 +143,6 @@ def da():   #DELETE ACCOUNT
     VV=input("PRESS ENTER TO SHOW NEW TABLE\n")
     print(df)
     
-
 
 inp=int(input("ENTER YOUR CHOICE :"))
 if inp==0:
